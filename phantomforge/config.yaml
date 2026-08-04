@@ -1,0 +1,29 @@
+mock: true
+database_url: sqlite:///./phantomforge.db
+reports_dir: reports
+runs_dir: runs
+concurrency_limit: 2
+allow_destructive: false
+gate_before_sqlmap: true
+gate_before_beef: true
+gate_before_crack: true
+tools:
+  nmap: /usr/bin/nmap
+  tshark: /usr/bin/tshark
+  sqlmap: /usr/bin/sqlmap
+  john: /usr/bin/john
+  beef: /usr/share/beef-xss/beef
+defaults:
+  nmap_flags: "-sV -sC -O --top-ports 1000"
+  nmap_timing: "-T3"
+  nmap_vuln_scripts: false
+  sqlmap_flags: "--batch --random-agent --threads=2 --crawl=1 --level=1 --risk=1"
+  tshark_interface: eth0
+  capture_duration: 30
+  john_wordlist: /usr/share/wordlists/rockyou.txt.gz
+beef:
+  base_url: http://127.0.0.1:3000
+  username: beef
+  password: beef
+  hook_url: http://127.0.0.1:3000/hook.js
+  beef_start_on_run: false
