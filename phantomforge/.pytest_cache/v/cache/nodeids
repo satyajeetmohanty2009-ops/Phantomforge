@@ -1,0 +1,9 @@
+[
+  "tests/test_config.py::test_config_loading",
+  "tests/test_parsers.py::test_john_show_parsing",
+  "tests/test_parsers.py::test_nmap_xml_parsing",
+  "tests/test_parsers.py::test_sqlmap_console_fallback",
+  "tests/test_parsers.py::test_sqlmap_json_parsing",
+  "tests/test_pipeline.py::test_mock_pipeline_end_to_end",
+  "tests/test_pipeline.py::test_scope_matching"
+]
